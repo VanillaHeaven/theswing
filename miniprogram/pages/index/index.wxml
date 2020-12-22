@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  
+
+  <view class="loginPanel">
+    <!-- <button bindtap="getRoomID">获取房间号</button>  -->
+    <input class="roomid" value="{{roomid}}" bindinput="inputRoomid" placeholder="房间号：只有我知道"></input>
+    <input class="roomid" value="{{token}}" bindinput="inputToken" placeholder="昵称：随便取" ></input>
+    <button class="enterbtn" bindtap="enter">进入影院</button> 
+  </view>
+</view>
+
+<image class="bg" src="{{bgurl}}">
+</image>

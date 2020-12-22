@@ -1,0 +1,84 @@
+<!--pages/iseemini/iseemini.wxml-->
+<view class="video" >
+ <video id='ourvideo' src="{{videourl}}" bindplay="playEvent" bindpause="pauseEvent" bindtimeupdate="videoDetail" enable-danmu="true" danmu-list="{{dialogue}}" bindfullscreenchange="fullscreenevent" bindtap="doubleTap" bindtouchstart="touchStart" bindtouchend="touchEnd" muted="{{videovolume}}">
+  <cover-view class="voicePanel {{voicePanelShow}}VoicePanel">
+    <cover-image class="voicePanelImg" src="{{voicePanelThumbnailUrl}}" bindtap="playPanelVoice"></cover-image>
+    <cover-view  class="voicePanelAutoControl" bindtap="autoPlayVoice">
+      <cover-view style="margin-top:10rpx">自动播放</cover-view>
+      <cover-image style="margin-top:6rpx;width:100%;height:37rpx;" src="{{voicePanelAutoControlBtn}}" ></cover-image>
+    </cover-view>
+  </cover-view>
+  <cover-view class="voicePanel {{voicePanelShow}}VoicePanel" style="top:330rpx;" bindtouchstart='voice_ing_start'  bindtouchmove='touchMove' bindtouchend="voice_ing_end">
+    <cover-image class="voicePanelImg" src="/static/images/record.png"></cover-image>
+  </cover-view>
+  <cover-view class="voicePanel {{voicePanelShow}}VoicePanel" style="top:460rpx;" bindtap="inputWhenFull">
+    <cover-image class="voicePanelImg" src="/static/images/jianpan.png"></cover-image>
+  </cover-view>
+  <input wx:if="{{inputInFullSc}}" class="mesInFull" focus="{{focus}}"  bindinput="inputMes" value="{{inputValue}}" confirm-type='send' bindconfirm="sendmes"></input>
+  <cover-view wx:if="{{inputInFullSc}}" class="mesInFull" bindtap="inputWhenFull2">{{inputValue}}</cover-view>
+ </video>
+</view>
+<view>
+  <button class='button' bindtap="playVideo" disabled="{{alldisable}}">播放</button>
+  <button class='button' bindtap="choosemovie" disabled="{{alldisable}}">选片</button>
+  <button class='button' bindtap="reconnect" disabled="{{alldisable}}">重连</button>
+  <button class='button' bindtap="closeConn" disabled="{{alldisable}}">关闭</button>
+  <button class='button' disabled="{{alldisable}}" bindtouchstart='voice_ing_start'  bindtouchmove='touchMove'  bindtouchend="voice_ing_end" >语音</button>
+</view>
+<input class="mes" bindinput="inputMes" value="{{inputValue}}" disabled="{{alldisable}}" confirm-type='send' bindconfirm="sendmes"></input>
+<button class='send_btn' bindtap="sendmes" disabled="{{alldisable}}">发送</button>
+<scroll-view class="dialog" scroll-y="true" scroll-top="{{toButtom}}">
+  <view id='dialog{{index}}' wx:for="{{dialogue}}" >
+    <view class="msgbox{{item.pos}}" bindtap="my_audio_click" data-url="{{item.fileID}}" data-type="{{item.type}}">
+  <!-- 非自己的消息 -->
+      <view class="dialogBoxImg {{item.left}}Msg">
+        <image class="dialogBoxImage {{item.left}}Msg" src="{{item.thumbnail}}"></image>
+      </view>
+      <view class="dialogBoxCtn {{item.left}}Msg">
+        <view wx:if="{{item.type == 1}}">{{item.text}}</view>
+        <image class="msgVoicebubble" wx:if="{{item.type == 2}}" src="/static/images/voiceBubbleopen.png"></image>
+      </view>
+    <!-- 自己的消息 -->
+      <view class="dialogBoxCtnRight {{item.right}}Msg">
+        <view wx:if="{{item.type == 1}}">{{item.text}}</view>
+        <image class="msgVoicebubble" wx:if="{{item.type == 2}}" src="/static/images/voiceBubbleclose.png"></image>
+      </view>
+      <view class="dialogBoxImgRight {{item.right}}Msg">
+        <image class="dialogBoxImageRight" src="{{item.thumbnail}}"></image>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+
+<view class="movielist {{choose}}list" scroll-y="true">
+  <view class="menu">
+    <view class="labelbtn1" bindtap="confirmone">确定</view>
+    <view class="chooseone">{{choosedone.movie}}{{episode}}</view>
+    <view class="labelbtn2 {{absflag}}Abstract" bindtap="cancel">取消</view>
+    <view class="labelbtn2 {{absflag2}}Abstract" bindtap="backtolist">返回</view>
+  </view>
+  <scroll-view class="list" scroll-y="true">
+    <view class="{{absflag}}Abstract" wx:for="{{movielist}}" data-index="{{index}}" bindtap="choose">
+      <view class="abstract">
+        <image class="thumb" src='{{imageurl}}{{item.image}}'></image>
+        <view class="name">{{item.movie}}</view>
+        <view class="detail"> {{item.other}}</view>
+      </view>
+    </view>
+    <view class="moviedetail {{absflag2}}Abstract">
+      <image class="thumbnail" src="{{imageurl}}{{choosedone.image}}"></image>
+      <view class="nameInDetail">《{{choosedone.movie}}》</view>
+      <view class="intro">{{choosedone.detail}}</view>
+      <view class="Episodes" wx:for="{{ep}}" bindtap="chooseEpisode"  data-index="{{index}}">EP{{item}}</view>
+    </view>
+  </scroll-view>
+</view>
+
+
+
+
+<view class="mubu {{closeFlag}}Panel">
+</view>
+<view class="closepanel {{closeFlag}}Panel">
+  <view>影院已关闭</view>
+</view>

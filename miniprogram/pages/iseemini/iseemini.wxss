@@ -1,0 +1,394 @@
+/* pages/iseemini/iseemini.wxss */
+
+.button {
+  width: 16%;
+  border-radius: 60rem;
+  margin-left: 3%; 
+  margin-top: 15rpx;
+  height: 70rpx;
+  font-size: 28rpx;
+  float: left;
+  border: none;
+  background-color: white;
+  box-shadow:0px 0px 5px -2px rgb(94, 94, 94);
+}
+
+
+
+.send_btn {
+  width: 17%;
+  margin-right: 4%; 
+  height: 80rpx;
+  font-size: 30rpx;
+  float: right;
+  margin-top: 30rpx;
+  border: none;
+  background-color: white;
+  box-shadow:0px 0px 5px 0px #DDDDDD;
+}
+
+.video {
+  background-color: black;
+  text-align:center;
+}
+
+.mesInFull {
+  position: absolute;
+  left: 20%;
+  width: 50%;
+  margin-top: 30rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: left;
+  border-radius: 30rem;
+  /* border: 1rpx solid #D3D3D3; */
+  padding-left: 4%; 
+  float: left;
+  color: rgb(240, 239, 239, 0.8);
+  font-size: 30rpx;
+  border: none;
+  box-shadow: inset 0px 0px 5px 0px #DDDDDD;
+}
+
+.mes {
+  width: 68%;
+  margin-left: 4%;
+  margin-top: 30rpx;
+  height: 80rpx;
+  border-radius: 30rem;
+  /* border: 1rpx solid #D3D3D3; */
+  padding-left: 4%; 
+  float: left;
+  color: gray;
+  font-size: 30rpx;
+  border: none;
+  box-shadow: inset 0px 0px 5px 0px #DDDDDD;
+}
+
+.dialog {
+  width: 90%;
+  margin-top: 30rpx;
+  float: left;
+  height: 400rpx;
+  border: none;
+  font-size: 30rpx;
+  padding-left: 5%; 
+  padding-right: 5%;
+  box-shadow: inset 0px 15px 10px -10px #DDDDDD;
+}
+
+.msgbox {
+  border-top: 1rpx solid #DDDDDD;
+  padding-bottom: 20rpx;
+}
+
+.msgboxRight {
+  text-align: right;
+  border-top: 1rpx solid rgb(240, 239, 239);
+  padding-bottom: 20rpx;
+}
+
+.dialogBoxImg {
+  padding-top: 3%;
+  display: inline-block;
+  width: 15%;
+}
+
+.dialogBoxImage {
+  height: 11vw;
+  width: 11vw;
+  border-radius: 50rem;
+  vertical-align:top;
+}
+
+.dialogBoxCtn {
+  margin-top: 6vw;
+  display: inline-block;
+  padding-left: 10rpx;
+  text-align: justify; 
+  max-width: 68%;
+  vertical-align:top;
+}
+
+.dialogBoxImgRight {
+  padding-top: 3%;
+  text-align: right;
+  width: 15%;
+  display: inline-block;
+}
+
+.dialogBoxImageRight {
+  height: 11vw;
+  width: 11vw;
+  border-radius: 50rem;
+  vertical-align:top;
+}
+
+.dialogBoxCtnRight {
+  text-align: justify;
+  margin-top: 6vw;
+  max-width: 68%;
+  vertical-align:top;
+  padding-right: 10rpx;
+  display: inline-block;
+}
+
+.closeMsg {
+  display: none;
+}
+
+.openMsg {
+  display: inline-block;
+}
+
+.movielist {
+  position: absolute;
+  top: 30rpx;
+  /* margin-top: 10rpx; */
+  width:90%;
+  left: 5%;
+  height:480rpx;
+  background-color: white;
+  box-shadow: 0px 0px 4px 0px #D3D3D3;
+}
+
+.showlist {
+  display: block;
+}
+
+.closelist {
+  display: none;
+}
+
+.menu {
+  display: flex;
+  width: 100%;
+  height: 16%;
+  line-height: 70rpx;
+  box-shadow: 0rpx 10rpx 8rpx -10rpx;
+}
+
+.labelbtn1 {
+  border: none;
+  width:20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30rpx;
+  text-align: center;
+  background-color: white; 
+  vertical-align: auto;
+}
+
+.labelbtn2 {
+  border: none;
+  width:20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30rpx;
+  text-align: center;
+  background-color: white; 
+  vertical-align: auto;
+}
+
+.chooseone {
+  border: none;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30rpx;
+  text-align: center;
+  background-color: white; 
+  vertical-align: top; 
+}
+
+.list {
+  height:84%;
+  width: 100%;
+  position: absolute;
+  bottom: 0rpx;
+}
+
+.space {
+  
+  float: left;
+  width: 2%;
+  height: 100rpx;
+}
+
+.abstract {
+  width: 28%;
+  height: 220rpx;
+  float: left;
+  margin-left: 4%;
+  margin-top: 30rpx;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.452);
+  font-size: 25rpx;
+  text-align: center;
+}
+
+.thumb {
+  margin-top: 10rpx;
+  
+  width: 50%;
+  height:66%;
+  text-align: center;
+}
+
+.name {
+  width: 100%;
+  text-align: center;
+  height: 10%;
+  font-size: 22rpx;
+  bottom:50rpx;
+  white-space:nowrap;
+}
+
+.detail {
+  width: 100%;
+  height: 10%;
+  margin-top: 5rpx; 
+  text-align: center;
+  color: rgba(0, 0, 0, 0.596);
+  font-size: 15rpx;
+  margin-bottom:0rpx;
+}
+
+.mubu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  background-color: black;
+}
+
+.closepanel {
+  position: absolute;
+  top: 35%;
+  width:40%;
+  left: 30%;
+  height:200rpx;
+  padding-top:60rpx;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.452);
+}
+
+.showPanel {
+  display: block;
+}
+
+.closePanel {
+  display: none;
+}
+
+.closebtn {
+  margin-top: 30rpx;
+  width: 50%;
+  background-color: white;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.452);
+  font-size: 30rpx;
+
+}
+
+.showAbstract {
+  display: block;
+}
+
+.closeAbstract {
+  display: none;
+}
+
+.moviedetail {
+  text-align: center;
+}
+
+.thumbnail {
+  width: 30%;
+  height: 300rpx;
+  margin-top: 20rpx;
+}
+
+.nameInDetail {
+  margin-top: 30rpx;
+  font-size: 35rpx;
+}
+
+.intro {
+  
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 30rpx;
+  font-size: 30rpx;
+}
+
+.Episodes {
+  float: left;
+  width: 15%;
+  height: 80rpx;
+  font-size: 30rpx;
+  margin-left: 4%;
+  margin-top: 20rpx;
+  text-align: center;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.452);
+  line-height: 80rpx;  /** 垂直居中 **/  
+}
+
+.voicePanel {
+  position: absolute;
+  right: 0rpx;
+  top: 200rpx;
+  height: 100rpx;
+  width: 200rpx;
+  background-color: white;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.452);
+  border-top-left-radius: 30rem;
+  border-bottom-left-radius: 30rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.showVoicePanel {
+  display: flex;
+}
+
+.closeVoicePanel {
+  display: none;
+}
+
+.voicePanelImg {
+  position: absolute;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rem;
+  left: 10rpx;
+  top: 10rpx;
+}
+
+.voicePanelAutoControl {
+  position: absolute;
+  width: 90rpx;
+  height: 80rpx;
+  right: 10rpx;
+  top: 10rpx;
+  font-size: 22rpx;
+}
+
+/* .voicePanelAutoControlLabel {
+  display: inline-block;
+  width: 90rpx;
+  height: 80rpx;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+  font-size: 22rpx;
+} */
+
+.msgVoicebubble {
+  height: 5vw;
+  width: 5vw;
+}
