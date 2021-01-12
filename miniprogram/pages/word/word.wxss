@@ -1,0 +1,8 @@
+/* miniprogram/pages/word/word.wxss */
+.showlist {
+  display: block;
+}
+
+.closelist {
+  display: none;
+}

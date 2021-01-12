@@ -1,0 +1,6 @@
+<!--miniprogram/pages/read/read.wxml-->
+<view>
+  <view>
+    <button class="enterbtn" bindtap="open">选择文件</button>
+  </view>
+</view>

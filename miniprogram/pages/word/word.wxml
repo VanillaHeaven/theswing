@@ -1,0 +1,9 @@
+<!--miniprogram/pages/word/word.wxml-->
+ <view> 
+  <input bindinput="bindKeyInput" value='{{letter}}'></input>
+  <button bindtap="send_letter">告诉未来的自己</button>
+</view> 
+<view class="{{choose}}list"> 
+  <textarea>{{dtime}} {{dletter}}</textarea>
+  <button bindtap="thanks">谢谢你</button>
+</view> 

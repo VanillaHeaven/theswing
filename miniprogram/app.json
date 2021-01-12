@@ -2,7 +2,9 @@
   "pages": [
     "pages/index/index",
     "pages/iseemini/iseemini",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/read/read",
+    "pages/word/word"
   ],
   "window": {
     "backgroundTextStyle": "light",

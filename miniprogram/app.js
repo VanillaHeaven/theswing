@@ -55,7 +55,7 @@ App({
   globalData: {
     userInfo: null,
     code: null,
-    baseurl: 'http://121.89.167.119',
-    wsurl: 'ws://121.89.167.119'
+    baseurl: 'http://120.79.35.53',
+    wsurl: 'ws://120.79.35.53'
   }
 })
