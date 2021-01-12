@@ -55,7 +55,7 @@ App({
   globalData: {
     userInfo: null,
     code: null,
-    baseurl: 'http://120.79.35.53',
-    wsurl: 'ws://120.79.35.53'
+    baseurl: 'http://www.dshane.xyz',
+    wsurl: 'ws://www.dshane.xyz'
   }
 })
